@@ -64,7 +64,7 @@ class TagRegistry
         }
 
         $label = $options['label'] ?? 'LLL:EXT:t3tags/Resources/Private/Language/locallang_tca.xlf:tx_t3tags_tag.tx_t3tags_tags';
-        $exclude = isset($options['exclude']) ? (bool)$options['exclude'] : true;
+        $exclude = !isset($options['exclude']) || (bool)$options['exclude'];
         $fieldConfiguration = $options['fieldConfiguration'] ?? [];
         $columns = [
             $fieldName => [
