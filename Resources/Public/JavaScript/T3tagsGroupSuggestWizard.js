@@ -8,12 +8,12 @@ define(['jquery', 'TYPO3/CMS/Backend/FormEngine'], function($, FormEngine) {
 
     T3tagsGroupSuggestWizard.initialize = function() {
         $('.t3tags-taggable').closest('.formengine-field-item').find('.t3-form-suggest').filter(function() {
-            return $(this).data('t3-suggest-initialized') && !$(this).data('t3tags-taggable-initialized');
+            return !$(this).data('t3tags-taggable-initialized');
         }).each(function() {
             $(this).data('t3tags-taggable-initialized', true);
             var autocomplete = $(this).autocomplete();
             var onSelectCallback = autocomplete.options.onSelect;
-            var transformResultCallback = autocomplete.options.transformResult
+            var transformResultCallback = autocomplete.options.transformResult;
             autocomplete.setOptions({
                 transformResult: function(response) {
                     response = transformResultCallback(response);
@@ -74,7 +74,9 @@ define(['jquery', 'TYPO3/CMS/Backend/FormEngine'], function($, FormEngine) {
 
         if ($('.t3-form-suggest').length) {
             require(['TYPO3/CMS/Backend/FormEngineSuggest'], function() {
-                T3tagsGroupSuggestWizard.initialize();
+                $(function() {
+                    T3tagsGroupSuggestWizard.initialize();
+                })
             });
         }
     };

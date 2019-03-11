@@ -3,7 +3,7 @@
 /***************************************************************
  * Extension Manager/Repository config file for ext "t3tags_test".
  *
- * Auto generated 11-03-2019 21:40
+ * Auto generated 12-03-2019 00:10
  *
  * Manual updates:
  * Only the data in the array - everything else is removed by next
@@ -18,12 +18,12 @@ $EM_CONF[$_EXTKEY] = array (
   'uploadfolder' => 0,
   'createDirs' => '',
   'clearCacheOnLoad' => 1,
-  'version' => '0.1.0',
+  'version' => '0.1.1',
   'constraints' => 
   array (
     'depends' => 
     array (
-      'typo3' => '8.7.8-8.7.99',
+      'typo3' => '8.7.8-9.5.99',
       't3tags' => '0.1.0',
     ),
     'conflicts' => 
