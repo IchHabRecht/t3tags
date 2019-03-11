@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+    <tx_t3tags_tag_mm>
+        <uid_local>1</uid_local>
+        <uid_foreign>1</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>relevant_tags</fieldname>
+        <sorting>0</sorting>
+        <sorting_foreign>1</sorting_foreign>
+    </tx_t3tags_tag_mm>
+    <tx_t3tags_tag_mm>
+        <uid_local>5</uid_local>
+        <uid_foreign>1</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>relevant_tags</fieldname>
+        <sorting>0</sorting>
+        <sorting_foreign>2</sorting_foreign>
+    </tx_t3tags_tag_mm>
+    <tx_t3tags_tag_mm>
+        <uid_local>7</uid_local>
+        <uid_foreign>1</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>relevant_tags</fieldname>
+        <sorting>0</sorting>
+        <sorting_foreign>3</sorting_foreign>
+    </tx_t3tags_tag_mm>
+    <tx_t3tags_tag_mm>
+        <uid_local>3</uid_local>
+        <uid_foreign>1</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>content_tags</fieldname>
+        <sorting>0</sorting>
+        <sorting_foreign>1</sorting_foreign>
+    </tx_t3tags_tag_mm>
+    <tx_t3tags_tag_mm>
+        <uid_local>10</uid_local>
+        <uid_foreign>1</uid_foreign>
+        <tablenames>tt_content</tablenames>
+        <fieldname>content_tags</fieldname>
+        <sorting>0</sorting>
+        <sorting_foreign>2</sorting_foreign>
+    </tx_t3tags_tag_mm>
+</dataset>

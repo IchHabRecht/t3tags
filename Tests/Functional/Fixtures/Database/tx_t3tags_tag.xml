@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+    <tx_t3tags_tag>
+        <uid>1</uid>
+        <pid>42</pid>
+        <title>magenta</title>
+    </tx_t3tags_tag>
+    <tx_t3tags_tag>
+        <uid>2</uid>
+        <pid>42</pid>
+        <title>magic</title>
+    </tx_t3tags_tag>
+    <tx_t3tags_tag>
+        <uid>3</uid>
+        <pid>42</pid>
+        <title>magie</title>
+    </tx_t3tags_tag>
+    <tx_t3tags_tag>
+        <uid>4</uid>
+        <pid>42</pid>
+        <title>magisch</title>
+    </tx_t3tags_tag>
+    <tx_t3tags_tag>
+        <uid>5</uid>
+        <pid>42</pid>
+        <title>portal magazin</title>
+    </tx_t3tags_tag>
+    <tx_t3tags_tag>
+        <uid>6</uid>
+        <pid>42</pid>
+        <title>zamaglak</title>
+    </tx_t3tags_tag>
+    <tx_t3tags_tag>
+        <uid>7</uid>
+        <pid>42</pid>
+        <title>magico</title>
+    </tx_t3tags_tag>
+    <tx_t3tags_tag>
+        <uid>8</uid>
+        <pid>42</pid>
+        <title>mag das</title>
+    </tx_t3tags_tag>
+    <tx_t3tags_tag>
+        <uid>9</uid>
+        <pid>42</pid>
+        <title>erzählstruktur</title>
+    </tx_t3tags_tag>
+    <tx_t3tags_tag>
+        <uid>10</uid>
+        <pid>42</pid>
+        <title>sprachtonalität</title>
+    </tx_t3tags_tag>
+    <tx_t3tags_tag>
+        <uid>11</uid>
+        <pid>42</pid>
+        <title>magnetic field</title>
+    </tx_t3tags_tag>
+    <tx_t3tags_tag>
+        <uid>12</uid>
+        <pid>42</pid>
+        <title>cloud apps</title>
+    </tx_t3tags_tag>
+</dataset>
