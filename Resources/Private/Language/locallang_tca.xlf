@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0" xmlns:t3="http://typo3.org/schemas/xliff">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-03-09T23:52:23Z" product-name="t3tags">
+        <header />
+        <body>
+            <trans-unit id="tx_t3tags_tag">
+                <source>Tag</source>
+            </trans-unit>
+            <trans-unit id="tx_t3tags_tag.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tx_t3tags_tag.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tx_t3tags_tag.items">
+                <source>Items</source>
+            </trans-unit>
+            <trans-unit id="tx_t3tags_tag.tx_t3tags_tags">
+                <source>Tags</source>
+            </trans-unit>
+            <trans-unit id="tx_t3tags_tag.notice">
+                <source />
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

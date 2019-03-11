@@ -23,6 +23,16 @@
     "require-dev": {
         "nimut/testing-framework": "4.x-dev"
     },
+    "autoload": {
+        "psr-4": {
+            "IchHabRecht\\T3tags\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "IchHabRecht\\T3tags\\Tests\\": "Tests/"
+        }
+    },
     "replace": {
         "typo3-ter/t3tags": "self.version"
     },

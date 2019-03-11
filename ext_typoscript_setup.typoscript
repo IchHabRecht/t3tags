@@ -1,0 +1,1 @@
+config.tx_extbase.persistence.classes.IchHabRecht\T3tags\Domain\Model\Tag.mapping.tableName = tx_t3tags_tag

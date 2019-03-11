@@ -1,0 +1,2 @@
+# cat=records/enable/101; type=string; label=LLL:EXT:t3tags/Resources/Private/Language/locallang_be.xlf:extConf.tagPid
+tagPid = 0
