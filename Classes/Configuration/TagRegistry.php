@@ -2,7 +2,6 @@
 declare(strict_types=1);
 namespace IchHabRecht\T3tags\Configuration;
 
-use IchHabRecht\T3tags\Error\Exception\EmptyExtensionNameException;
 use IchHabRecht\T3tags\Error\Exception\EmptyTableNameException;
 use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
@@ -11,7 +10,6 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 class TagRegistry
 {
     public function makeTaggable(
-        string $extensionKey,
         string $tableName,
         string $fieldName = 'tx_t3tags_tags',
         array $options = [],
@@ -19,15 +17,9 @@ class TagRegistry
     ): bool {
         $didRegister = false;
 
-        if (empty($extensionKey)) {
-            throw new EmptyExtensionNameException(
-                'Empty extension name for tableName "' . $tableName . '" / fieldName "' . $fieldName . '" given.',
-                1522934866
-            );
-        }
         if (empty($tableName)) {
             throw new EmptyTableNameException(
-                'Empty table name for extensionKey "' . $extensionKey . '" / fieldName "' . $fieldName . '" given.',
+                'Empty table name for fieldName "' . $fieldName . '" given.',
                 1522934699
             );
         }

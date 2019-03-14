@@ -5,7 +5,6 @@ defined('TYPO3_MODE') || die();
     $tagRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\IchHabRecht\T3tags\Configuration\TagRegistry::class);
 
     $tagRegistry->makeTaggable(
-        't3tags_test',
         'tt_content',
         'relevant_tags',
         [
@@ -29,7 +28,6 @@ defined('TYPO3_MODE') || die();
     );
 
     $tagRegistry->makeTaggable(
-        't3tags_test',
         'tt_content',
         'content_tags',
         [
