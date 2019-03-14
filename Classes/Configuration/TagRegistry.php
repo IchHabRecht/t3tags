@@ -3,6 +3,7 @@ declare(strict_types=1);
 namespace IchHabRecht\T3tags\Configuration;
 
 use IchHabRecht\T3tags\Error\Exception\EmptyTableNameException;
+use IchHabRecht\T3tags\Error\Exception\UnknownTableException;
 use TYPO3\CMS\Core\Utility\ArrayUtility;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -21,6 +22,12 @@ class TagRegistry
             throw new EmptyTableNameException(
                 'Empty table name for fieldName "' . $fieldName . '" given.',
                 1522934699
+            );
+        }
+        if (!isset($GLOBALS['TCA'][$tableName])) {
+            throw new UnknownTableException(
+                'Unknown tableName "' . $tableName . '" given.',
+                1552560420
             );
         }
 
