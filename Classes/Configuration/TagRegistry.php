@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+declare(strict_types = 1);
 namespace IchHabRecht\T3tags\Configuration;
 
 use IchHabRecht\T3tags\Error\Exception\EmptyTableNameException;
@@ -63,7 +63,7 @@ class TagRegistry
         }
 
         $label = $options['label'] ?? 'LLL:EXT:t3tags/Resources/Private/Language/locallang_tca.xlf:tx_t3tags_tag.tx_t3tags_tags';
-        $exclude = !isset($options['exclude']) || (bool)$options['exclude'];
+        $exclude = !isset($options['exclude']) || (bool) $options['exclude'];
         $fieldConfiguration = $options['fieldConfiguration'] ?? [];
         $columns = [
             $fieldName => [

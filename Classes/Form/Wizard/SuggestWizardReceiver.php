@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+declare(strict_types = 1);
 namespace IchHabRecht\T3tags\Form\Wizard;
 
 use TYPO3\CMS\Backend\Form\Wizard\SuggestWizardDefaultReceiver;

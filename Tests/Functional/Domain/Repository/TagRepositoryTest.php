@@ -1,4 +1,5 @@
 <?php
+declare(strict_types = 1);
 namespace IchHabRecht\T3tags\Tests\Functional\Domain\Repository;
 
 use IchHabRecht\T3tags\Domain\Repository\TagRepository;

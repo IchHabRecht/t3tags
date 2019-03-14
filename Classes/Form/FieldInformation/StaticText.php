@@ -1,5 +1,5 @@
 <?php
-declare(strict_types=1);
+declare(strict_types = 1);
 namespace IchHabRecht\T3tags\Form\FieldInformation;
 
 use TYPO3\CMS\Backend\Form\AbstractNode;
@@ -17,7 +17,7 @@ class StaticText extends AbstractNode
         $languageService = $this->getLanguageService();
 
         $labels = [];
-        foreach ((array)$this->data['renderData']['fieldInformationOptions']['labels'] as $labelConfiguration) {
+        foreach ((array) $this->data['renderData']['fieldInformationOptions']['labels'] as $labelConfiguration) {
             $label = htmlspecialchars($languageService->sL($labelConfiguration['label']));
             if (!empty($labelConfiguration['italic'])) {
                 $label = '<em>' . $label . '</em>';
