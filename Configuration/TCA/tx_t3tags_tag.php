@@ -29,7 +29,11 @@ return [
     'interface' => [
         'showRecordFieldList' => 'title',
     ],
-    'palettes' => [],
+    'palettes' => [
+        'timeRestriction' => [
+            'showitem' => 'starttime, endtime',
+        ],
+    ],
     'types' => [
         '0' => [
             'showitem' => '
@@ -101,7 +105,7 @@ return [
                 'type' => 'group',
                 'internal_type' => 'db',
                 'allowed' => '*',
-                'MM' => 'sys_category_record_mm',
+                'MM' => 'tx_t3tags_tag_mm',
                 'MM_oppositeUsage' => [],
                 'size' => 10,
                 'fieldWizard' => [
