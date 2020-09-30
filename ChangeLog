@@ -1,3 +1,7 @@
+2020-09-30         [RELEASE] Release of t3tags 1.0.1 (Nicole Cordes)
+2020-09-29 ef9b336 [TASK] Update supporting files to EXT:my_skeleton 0.4.0 (Nicole Cordes)
+2020-09-29 67fc1b4 [BUGFIX] Fix TCA configuration of tx_t3tags_tag (Nicole Cordes)
+
 2019-03-14         [RELEASE] Release of t3tags 1.0.0 (Nicole Cordes)
 2019-03-14 d1ec7e8 [TASK] Fix coding style according to PHP-CS-Fixer (Nicole Cordes)
 2019-03-14 afaa38d [FEATURE] Provide basic README documentation (Nicole Cordes)
