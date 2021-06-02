@@ -24,7 +24,17 @@ Generate tag fields for every record type.
 
 **Register a new field using the TagRegistry**
 
-- Add or extend a file in Configuration/TCA/Overrides
+- Add or extend the existing `ext_tables.sql` file to add the fields to the database table
+
+```
+CREATE TABLE tt_content
+(
+    relevant_tags TEXT,
+    content_tags TEXT
+);
+```
+
+- Add or extend a file in `Configuration/TCA/Overrides`
 
 ```
 <?php
