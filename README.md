@@ -24,13 +24,13 @@ Generate tag fields for every record type.
 
 **Register a new field using the TagRegistry**
 
-- Add or extend the existing `ext_tables.sql` file to add the fields to the database table
+- Add or extend the `ext_tables.sql` file to add the new tag fields to the database table
 
 ```
 CREATE TABLE tt_content
 (
-    relevant_tags TEXT,
-    content_tags TEXT
+    relevant_tags int(11) DEFAULT '0' NOT NULL,
+    content_tags int(11) DEFAULT '0' NOT NULL
 );
 ```
 
