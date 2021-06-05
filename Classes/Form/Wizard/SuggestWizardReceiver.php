@@ -5,7 +5,9 @@ declare(strict_types=1);
 namespace IchHabRecht\T3tags\Form\Wizard;
 
 use TYPO3\CMS\Backend\Form\Wizard\SuggestWizardDefaultReceiver;
+use TYPO3\CMS\Core\Configuration\ExtensionConfiguration;
 use TYPO3\CMS\Core\Imaging\Icon;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Core\Utility\StringUtility;
 
 class SuggestWizardReceiver extends SuggestWizardDefaultReceiver
@@ -32,7 +34,7 @@ class SuggestWizardReceiver extends SuggestWizardDefaultReceiver
                 'uid' => $newUid,
             ];
             $pid = null;
-            $settings = unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['t3tags'], ['allowed_classes' => false]);
+            $settings = GeneralUtility::makeInstance(ExtensionConfiguration::class)->get('t3tags');
             if (!empty($settings['tagPid'])) {
                 $pid = $settings['tagPid'];
             } elseif (!empty($this->allowedPages)) {
