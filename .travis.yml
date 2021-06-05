@@ -25,6 +25,8 @@ jobs:
     allow_failures:
         -   if: type != cron
             env: TYPO3=10.4.x-dev
+        -   if: type != cron
+            env: TYPO3=9.5.x-dev
     include:
         - &tests
             stage: 🏃 tests
@@ -70,8 +72,20 @@ jobs:
             php: 7.4
             env: TYPO3=^10.4
         -   <<: *tests
+            php: 7.4
+            env: TYPO3=^9.5
+        -   <<: *tests
             php: 7.3
             env: TYPO3=^10.4
+        -   <<: *tests
+            php: 7.3
+            env: TYPO3=^9.5
+        -   <<: *tests
+            php: 7.2
+            env: TYPO3=^10.4
+        -   <<: *tests
+            php: 7.2
+            env: TYPO3=^9.5
 
         -   stage: 🚢 to ter
             if: tag IS present AND env(TYPO3_ORG_USERNAME) IS present AND env(TYPO3_ORG_PASSWORD) IS present
@@ -96,8 +110,8 @@ jobs:
             if: type = push AND branch IN (master, pre-merge) AND env(SONAR_TOKEN) IS present AND fork = false
             git:
                 depth: false
-            php: 7.3
-            env: TYPO3="^10.4"
+            php: 7.2
+            env: TYPO3="^9.5 ^10.4"
             before_install:
                 - nvm install 12
                 - nvm use 12
@@ -171,8 +185,20 @@ jobs:
             php: 7.4
             env: TYPO3=10.4.x-dev
         -   <<: *dev-tests
+            php: 7.4
+            env: TYPO3=9.5.x-dev
+        -   <<: *dev-tests
             php: 7.3
             env: TYPO3=10.4.x-dev
+        -   <<: *dev-tests
+            php: 7.3
+            env: TYPO3=9.5.x-dev
+        -   <<: *dev-tests
+            php: 7.2
+            env: TYPO3=10.4.x-dev
+        -   <<: *dev-tests
+            php: 7.2
+            env: TYPO3=9.5.x-dev
 
         - &lowest-tests
             <<: *dev-tests
@@ -188,8 +214,32 @@ jobs:
             php: 7.4
             env: TYPO3=10.4.x-dev
         -   <<: *lowest-tests
+            php: 7.4
+            env: TYPO3=^9.5
+        -   <<: *lowest-tests
+            php: 7.4
+            env: TYPO3=9.5.x-dev
+        -   <<: *lowest-tests
             php: 7.3
             env: TYPO3=^10.4
         -   <<: *lowest-tests
             php: 7.3
             env: TYPO3=10.4.x-dev
+        -   <<: *lowest-tests
+            php: 7.3
+            env: TYPO3=^9.5
+        -   <<: *lowest-tests
+            php: 7.3
+            env: TYPO3=9.5.x-dev
+        -   <<: *lowest-tests
+            php: 7.2
+            env: TYPO3=^10.4
+        -   <<: *lowest-tests
+            php: 7.2
+            env: TYPO3=10.4.x-dev
+        -   <<: *lowest-tests
+            php: 7.2
+            env: TYPO3=^9.5
+        -   <<: *lowest-tests
+            php: 7.2
+            env: TYPO3=9.5.x-dev
