@@ -1,6 +1,6 @@
 {
     "name": "ichhabrecht/t3tags",
-    "description": "Generate tag fields for every record type",
+    "description": "Add custom tag fields to every TYPO3 record type",
     "type": "typo3-cms-extension",
     "keywords": [
         "TYPO3 CMS",
@@ -17,11 +17,11 @@
         }
     ],
     "require": {
-        "php": ">= 7.0, < 7.4",
-        "typo3/cms-core": "^8.7 || ^9.5"
+        "php": ">= 7.4, <= 8.2",
+        "typo3/cms-core": "^9.5 || ^10.4 || ^11.5"
     },
     "require-dev": {
-        "nimut/testing-framework": "4.x-dev"
+        "nimut/testing-framework": "5.x-dev"
     },
     "autoload": {
         "psr-4": {

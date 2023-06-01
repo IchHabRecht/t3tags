@@ -86,10 +86,12 @@ class TagRegistry
         }
 
         if (
-            !isset($options['interface']) || $options['interface']
-            && !empty($GLOBALS['TCA'][$tableName]['interface']['showRecordFieldList'])
-            && !GeneralUtility::inList($GLOBALS['TCA'][$tableName]['interface']['showRecordFieldList'], $fieldName)
+            !isset($options['interface']) || ($options['interface']
+                && !empty($GLOBALS['TCA'][$tableName]['interface']['showRecordFieldList'])
+                && !GeneralUtility::inList($GLOBALS['TCA'][$tableName]['interface']['showRecordFieldList'], $fieldName))
         ) {
+            $GLOBALS['TCA'][$tableName]['interface'] ??= [];
+            $GLOBALS['TCA'][$tableName]['interface']['showRecordFieldList'] ??= '';
             $GLOBALS['TCA'][$tableName]['interface']['showRecordFieldList'] .= ',' . $fieldName;
         }
 
