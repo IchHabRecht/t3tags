@@ -1,6 +1,6 @@
 {
     "name": "ichhabrecht/t3tags",
-    "description": "Generate tag fields for every record type",
+    "description": "Add custom tag fields to every TYPO3 record type",
     "type": "typo3-cms-extension",
     "keywords": [
         "TYPO3 CMS",

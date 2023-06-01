@@ -4,27 +4,33 @@
 [![Build Status](https://img.shields.io/travis/IchHabRecht/t3tags/master.svg)](https://travis-ci.org/IchHabRecht/t3tags)
 [![StyleCI](https://styleci.io/repos/174751542/shield?branch=master)](https://styleci.io/repos/174751542)
 
-Generate tag fields for every record type.
+Add custom tag fields to every TYPO3 record type.
+
+![Screenshot](Documentation/screenshot.png)
 
 ## Features
 
-- Integrates into Core API and extends `group` field behaviour
+- Allows integrators to add one or many tag fields to any record type
 - New tags can be added on the fly and are created only when the record is saved
-- New tags that are added to multiple (tag) fields are created only once in database
+- Existing tags are show in a autocomplete wizard
+- New tags that are added to multiple tag fields are created only once in database
+- Integrates into Core API and extends `group` field behaviour
 
 ## Installation
 
-1. Simply install the extension with Composer or the [Extension Manager](https://extensions.typo3.org/extension/t3tags/).
+1. Install the extension with Composer or the [Extension Manager](https://extensions.typo3.org/extension/t3tags/).
 
 `composer require ichhabrecht/t3tags`
 
 2. In the extension settings configure a page uid, where tags should be stored.
 
-## Usage
+## Configuration
 
-**Register a new field using the TagRegistry**
+“Tag” fields may be added to any table. In the following example we add two
+tag fields to »tt_content« records.
 
-- Add or extend the `ext_tables.sql` file to add the new tag fields to the database table
+- Add or extend the `ext_tables.sql` file in your sitepackage extension
+  to add the new tag fields to the database table
 
 ```
 CREATE TABLE tt_content
@@ -34,7 +40,8 @@ CREATE TABLE tt_content
 );
 ```
 
-- Add or extend a file in `Configuration/TCA/Overrides`
+- Add or extend a TCA override file in your sitepackage extension,
+  in this case `Configuration/TCA/Overrides/tt_content.php`
 
 ```
 <?php
@@ -106,6 +113,8 @@ defined('TYPO3_MODE') || die();
     - fieldList
     - typesList
 4. override: True, if any existing field configuration should be replaced with the one provided
+
+## Usage
 
 **Get all tags for a record by field**
 
